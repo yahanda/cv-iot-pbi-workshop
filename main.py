@@ -10,10 +10,10 @@ import time
 # The sample connects to a device-specific MQTT endpoint on your IoT Hub.
 from azure.iot.device import IoTHubDeviceClient, Message, MethodResponse
 
-CONNECTION_STRING = "{Your IoT hub device connection string}"
-PREDICTION_URL="{Your Custom Vision Prediction URL}"
-PREDICTION_KEY = "{Your Custom Vision Prediction Key}"
-TAG_LIST = ["banana", "apple", "orange"]
+CONNECTION_STRING = "HostName=iot-cvhol-yahanda.azure-devices.net;DeviceId=camera001;SharedAccessKey=Ltn/2q5sg23nlkVJ1buo/6n+F/ecZofll+hWENM3+Sk="
+PREDICTION_URL = "https://japaneast.api.cognitive.microsoft.com/customvision/v3.0/Prediction/c067c759-7ee0-4f1a-8559-30f6c03523ef/detect/iterations/Iteration1/image"
+PREDICTION_KEY = "521ffc87e9444f878612b56666240181"
+TAG_LIST = ["person"]
 
 def iothub_client_init():
     # Create an IoT Hub client
